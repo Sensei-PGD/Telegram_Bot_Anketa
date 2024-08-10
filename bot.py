@@ -163,13 +163,13 @@ def show_result(chat_id):
 
     if answers_score_optimist > answers_score_pessimist:
         result_message += "Ты - оптимист! 😊"
-        image_path = "Pict/Optimist.png"
+        image_path = "Optimist.png"
     elif answers_score_optimist < answers_score_pessimist:
         result_message += "Ты - пессимист! 😞"
-        image_path = "Pict/Pessimist.png"
+        image_path = "Pessimist.png"
     else:
         result_message += "Ты - балансированный 😐"
-        image_path = "Pict/Balanced.png"
+        image_path = "Balanced.png"
 
     bot.send_photo(chat_id, open(image_path, 'rb'))
     bot.send_message(chat_id, result_message)
